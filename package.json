@@ -1,0 +1,11 @@
+{
+  "name": "rideradar-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "py -3 -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload --app-dir backend",
+    "build": "npm --prefix frontend run build"
+  }
+}
