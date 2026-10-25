@@ -12,7 +12,8 @@ import type {
   ProviderOut,
 } from './types';
 
-const BASE = '/api/v1';
+const API_HOST = import.meta.env.VITE_API_BASE_URL || '';
+const BASE = `${API_HOST}/api/v1`;
 
 async function apiFetch<T>(url: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${url}`, {
